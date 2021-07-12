@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery.min.js"></script>     
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Domotica KARPA</title>
+      </head>
+<body>
+
+<h1>The XMLHttpRequest Object</h1>
+
+<button type="button" onclick="leer_value()">Request data</button>
+
+<p>Click the button several times to see if the time changes, or if the file is cached.</p>
+
+<p id="demo"></p>
+
+<script>
+
+
+function leer_value(){
+//$("#re").css("visibility","hidden");
+// document.getElementById("loader").style.visibility = "visible";
+console.log("Ejecuto");
+var url = "http://192.168.4.1/red?callback=ctrlq&id=nombre&pass=apellido";  // Celda_Inicial y Celda_Inicial es la Celda_Inicial + 8 leds
+
+
+var request = jQuery.ajax({
+  crossDomain: false,
+  url: url ,
+  method: "GET",
+  dataType: "text/plain"
+})  
+    .done(function( data ) {
+        console.log(data);
+        console.log("done");
+        alert(data.responseText);
+    })
+    .fail( function(xhr, textStatus, errorThrown) {
+        alert(xhr.responseText);
+        alert(textStatus);
+    });
+
+}
+
+// print the returned data
+function ctrlq(e) {
+
+
+//$("#re").html(e.result);
+//$("#re").css("visibility","visible");
+//document.getElementById("loader").style.visibility = "hidden";
+console.log("LED");
+//leer_value();
+   //var LED = e.result.split(",");
+   var LED = e.result;
+   //document.getElementById("demo").innerHTML = LED[0];
+   console.log(LED);
+  
+  }
+
+
+</script>
+
+</body>
+</html>

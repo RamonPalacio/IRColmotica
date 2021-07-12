@@ -1,0 +1,11 @@
+{
+  "WiFi": {
+    "SSID": "TIGO-6C8A",
+    "PASS": "4D9697506216",
+    "APSSID": "俄非俄非黑",
+    "APPASS": "123456789.",
+    "SERVERTCP": "192.168.1.3",
+    "SERVERPORT": "8888",
+    "HOSTNAME": "control"
+  }
+}

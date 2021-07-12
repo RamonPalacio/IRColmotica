@@ -1,0 +1,65 @@
+{
+  "CONTROLES": {
+    "E0E0E01F": {
+      "name": "vol+",
+      "control": "samsumg1",
+      "id": 1
+    },
+    "E0E0D02F": {
+      "name": "vol-",
+      "control": "samsumg1",
+      "id": 2
+    },
+    "E0E0A659": {
+      "name": "azquierda",
+      "control": "samsumg1",
+      "id": 3
+    },
+    "E0E046B9": {
+      "name": "derecha",
+      "control": "samsumg1",
+      "id": 4
+    },
+    "E0E006F9": {
+      "name": "arriba",
+      "control": "samsumg1",
+      "id": 5
+    },
+    "E0E08679": {
+      "name": "abajo",
+      "control": "samsumg1",
+      "id": 6
+    },
+    "E0E01AE5": {
+      "name": "atras",
+      "control": "samsumg1",
+      "id": 7
+    },
+    "E0E09E61": {
+      "name": "menu",
+      "control": "samsumg1",
+      "id": 8
+    },
+    "E0E016E9": {
+      "name": "centro",
+      "control": "samsumg1",
+      "id": 9
+    },
+    "E0E02FD0": {
+      "name": "amazon",
+      "control": "samsumg1",
+      "id": 10
+    },
+    "E0E0CF30": {
+      "name": "nexflix",
+      "control": "samsumg1",
+      "id": 11
+    },
+     "E0E06798": {
+      "name": "power",
+      "control": "samsumg1",
+      "id": 12
+    }
+
+  }
+}
