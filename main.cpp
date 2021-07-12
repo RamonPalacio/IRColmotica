@@ -1,7 +1,6 @@
 //******** Declaracion Variables Globales ************
 using namespace std;
 //****************************************************
-
 //******** Declaracion de Librerias Externas ************
 #include <ESP8266WiFi.h>        // Include the Wi-Fi library
 #include <WebSocketsServer.h>
@@ -59,7 +58,7 @@ using namespace std;
             // Serial.println(sensorValue);
             webSocket.loop();
             SocketGetter();
-            server.handleClient(); // Listen for HTTP requests from cliemts
+            server.handleClient(); // HTTP
             IRGetter();
 
             switch (countMillis)
