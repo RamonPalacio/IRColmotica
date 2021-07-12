@@ -1,2 +1,1 @@
-el IR necesita 470 Ohmios
-la Salida Necesita un diodo IN4148
+Proyecto que mediante un servidor AP , puede controlar cualquier dispositivo que se gestione bajo control por Infrarojo a 38Mhz.
