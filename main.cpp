@@ -58,7 +58,7 @@ using namespace std;
             // Serial.println(sensorValue);
             webSocket.loop();
             SocketGetter();
-            server.handleClient(); // HTTP
+            server.handleClient(); // HTTPServer Loop
             IRGetter();
 
             switch (countMillis)
