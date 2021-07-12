@@ -139,28 +139,18 @@ string ReplaceAll(std::string , const std::string& , const std::string& );
                         }
                         Serial << res.data(); Serial << "\n";
 
-                              res = ReplaceAll(res, "3,1,", "|") ;
-                              res = ReplaceAll(res, "1,1,", "@") ;
-                              res = ReplaceAll(res, "||", "*") ;
-                              res = ReplaceAll(res, "@@", "+") ;
-                              res = ReplaceAll(res, "++", ".") ;
-                              res = ReplaceAll(res, "..", "?") ;
+                              res = ReplaceAll(ReplaceAll(ReplaceAll(ReplaceAll(ReplaceAll(ReplaceAll(res, "3,1,", "|") , "1,1,", "@"), "||", "*"), "@@", "+"), "++", "."), "..", "?") ;
                        
-                        Serial << res.data(); Serial << "\n";
+                              Serial << res.data(); Serial << "\n";
 
                               if(STAConect){
-                                    webSocket.sendTXT(0,res.data());
-                                    webSocket.sendTXT(1,res.data());
-                                    webSocket.sendTXT(2,res.data());
-                                    webSocket.sendTXT(3,res.data());
-                                    webSocket.sendTXT(4,res.data());
+                                    for (size_t i = 0; i < 5; i++)
+                                    {
+                                          webSocket.sendTXT(i,res.data());
+                                    }
                               }
-                              res = ReplaceAll(res, "?", "..") ;
-                              res = ReplaceAll(res, ".", "++") ;
-                              res = ReplaceAll(res, "+", "@@") ;
-                              res = ReplaceAll(res, "*", "||") ;
-                              res = ReplaceAll(res, "@", "1,1,") ;
-                              res = ReplaceAll(res, "|", "3,1,") ;
+
+                              res = ReplaceAll(ReplaceAll(ReplaceAll( ReplaceAll(ReplaceAll(ReplaceAll(res, "?", ".."), ".", "++"), "+", "@@"), "*", "||"), "@", "1,1,"), "|", "3,1,") ;
 
 
                         // delay(2000);                        

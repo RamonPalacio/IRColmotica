@@ -237,13 +237,8 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t length
         case WStype_TEXT:  // Recibe Texto del Socket
             Serial.printf("[%u] WS: %s\n", num, payload);
             
-            string ReadStringTemp = (const char*)payload;
-            ReadStringTemp = ReplaceAll(ReadStringTemp, "?", "..") ;
-            ReadStringTemp = ReplaceAll(ReadStringTemp, ".", "++") ;
-            ReadStringTemp = ReplaceAll(ReadStringTemp, "+", "@@") ;
-            ReadStringTemp = ReplaceAll(ReadStringTemp, "*", "||") ;
-            ReadStringTemp = ReplaceAll(ReadStringTemp, "@", "1,1,") ;
-            ReadStringTemp = ReplaceAll(ReadStringTemp, "|", "3,1,") ;
+            string ReadStringTemp {};
+            ReadStringTemp = ReplaceAll(ReplaceAll(ReplaceAll( ReplaceAll(ReplaceAll(ReplaceAll((const char*)payload, "?", ".."), ".", "++"), "+", "@@"), "*", "||"), "@", "1,1,"), "|", "3,1,") ;
             Serial << ReadStringTemp.data();
             Enviar_IR_Dec(ReadStringTemp);
             break;
